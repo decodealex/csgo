@@ -1,0 +1,6 @@
+framework module Pods_gameInside {
+  umbrella header "Pods-gameInside-umbrella.h"
+
+  export *
+  module * { export * }
+}
