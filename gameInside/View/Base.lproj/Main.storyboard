@@ -18,59 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="whO-z6-YV4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="whO-z6-YV4">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="120" id="xPu-Zg-Ovz" customClass="OneNewsTableViewCell" customModule="gameInside" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="OCe-32-uVv">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xPu-Zg-Ovz" id="Zw6-zC-qjx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OCe-32-uVv" id="3YC-Ng-1R4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l72-U5-KQ8">
-                                                    <rect key="frame" x="20" y="5.5" width="160" height="110"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="l72-U5-KQ8" secondAttribute="height" multiplier="16:11" id="SgT-Kd-B9L"/>
-                                                        <constraint firstAttribute="width" constant="160" id="bbo-u3-4BM"/>
-                                                        <constraint firstAttribute="height" constant="110" id="sTn-rM-5kz"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Pgw-ZH-QEv">
-                                                    <rect key="frame" x="190" y="8.5" width="214" height="24"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yu-Co-yBL">
-                                                    <rect key="frame" x="190" y="32" width="194" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="3Yu-Co-yBL" firstAttribute="leading" secondItem="l72-U5-KQ8" secondAttribute="trailing" constant="10" id="0Vd-LJ-hog"/>
-                                                <constraint firstItem="l72-U5-KQ8" firstAttribute="top" secondItem="Zw6-zC-qjx" secondAttribute="top" constant="5" id="5Zn-7U-wko"/>
-                                                <constraint firstItem="l72-U5-KQ8" firstAttribute="centerY" secondItem="Zw6-zC-qjx" secondAttribute="centerY" id="9DJ-4c-Ee0"/>
-                                                <constraint firstItem="l72-U5-KQ8" firstAttribute="leading" secondItem="Zw6-zC-qjx" secondAttribute="leading" constant="20" id="E4I-fY-iyt"/>
-                                                <constraint firstItem="3Yu-Co-yBL" firstAttribute="top" secondItem="Pgw-ZH-QEv" secondAttribute="bottom" constant="10" id="FTK-xf-Aqp"/>
-                                                <constraint firstAttribute="bottom" secondItem="l72-U5-KQ8" secondAttribute="bottom" constant="5" id="PHI-Yd-Tsi"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3Yu-Co-yBL" secondAttribute="trailing" constant="10" id="YQ2-op-gGn"/>
-                                                <constraint firstAttribute="trailing" secondItem="Pgw-ZH-QEv" secondAttribute="trailing" constant="10" id="YwE-jh-ZuH"/>
-                                                <constraint firstItem="Pgw-ZH-QEv" firstAttribute="top" secondItem="Zw6-zC-qjx" secondAttribute="top" constant="8" id="Z8h-b2-QMp"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="3Yu-Co-yBL" secondAttribute="bottom" constant="15" id="iBp-Er-TFu"/>
-                                                <constraint firstItem="Pgw-ZH-QEv" firstAttribute="leading" secondItem="l72-U5-KQ8" secondAttribute="trailing" constant="10" id="iGu-pj-7Sz"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="newsImageView" destination="l72-U5-KQ8" id="gm8-RS-gIw"/>
-                                            <outlet property="newsTextCell" destination="3Yu-Co-yBL" id="zJx-pK-e82"/>
-                                            <outlet property="newsTitleCell" destination="Pgw-ZH-QEv" id="pLp-XH-HJP"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Gcm-3p-DXL"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="qSN-3x-ZBl"/>

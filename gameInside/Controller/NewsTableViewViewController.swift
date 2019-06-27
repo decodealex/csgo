@@ -12,19 +12,20 @@ import WebKit
 class NewsTableViewViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var news: [News]!
-    let webView = WKWebView()
-    var test: [News] = []
+    
+//    var news: [News]!
+    var matches: [Match]!
+    var html: String = ""
+    var parsedData: [Match]!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        displayURL()
-//        test = mainPageDataRequest()
-//        print(test)
-        mainPageDataRequest()
-//        test = mainPageParsing(from: html)
-//        news = mainPageParsing(from: test)
-        news = createNews()
+        html = getHTMLFrom(baseURLString)
+        parsedData = mainPageParsing(from: html)
+        matches = parsedData
+        var nib = UINib(nibName: "MatchTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "matchCell")
     }
     
     
@@ -44,19 +45,23 @@ class NewsTableViewViewController: UIViewController {
 }
 
 extension NewsTableViewViewController: UITableViewDataSource, UITabBarDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return news.count
+        return matches.count / 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = news[indexPath.row]
+        let match = matches[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! OneNewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell") as! MatchTableViewCell
         
-        cell.configureCell(post: post)
+        cell.configureCell(withData: match)
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
     
 }
