@@ -9,15 +9,13 @@
 import Foundation
 import UIKit
 
-struct News {
+struct MatchHTMLData {
     
-    var image: UIImage
-    var title: String
-    var text: String
+    var matchID: Int
+    var matchHTML: String
     
-    init(image: UIImage, title: String, text: String) {
-        self.image = image
-        self.title = title
-        self.text = text
+    init(matchID: Int, matchHTML: String) {
+        self.matchID = matchID
+        self.matchHTML = matchHTML
     }
 }

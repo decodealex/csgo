@@ -19,6 +19,8 @@ struct Match {
     var eventName: String
     var eventImage: UIImage
     var matchType: String
+
+//    var matchHTML: String
     
     init(leftTeamImage: UIImage, rightTeamImage: UIImage, leftTeamTitle: String, rightTeamTitle: String, matchTime: String, eventName: String, eventImage: UIImage, matchType: String) {
         self.leftTeamImage = leftTeamImage
@@ -29,5 +31,6 @@ struct Match {
         self.eventName = eventName
         self.eventImage = eventImage
         self.matchType = matchType
+//        self.matchHTML = matchHTML
     }
 }

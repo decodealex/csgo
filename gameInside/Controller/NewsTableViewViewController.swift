@@ -17,31 +17,16 @@ class NewsTableViewViewController: UIViewController {
     var matches: [Match]!
     var html: String = ""
     var parsedData: [Match]!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         html = getHTMLFrom(baseURLString)
-        parsedData = mainPageParsing(from: html)
+        parseOneMatchHTML(from: html)
+        parsedData = mainPageParsing(from: parseOneMatchHTML)
         matches = parsedData
         var nib = UINib(nibName: "MatchTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "matchCell")
     }
-    
-    
-    func createNews() -> [News] {
-//        displayURL()
-        var tempNews: [News] = []
-//        displayURL()
-        let post1 = News(image: UIImage(named: "testImage")!, title: "TestTitle post can be here", text: "Loremipsun sajnlksanflkasnf lorem ipnsaon ;skljkf")
-        let post2 = News(image: UIImage(named: "testImage")!, title: "TestTisadtle post can be dsfsdfhere", text: "Loremdsa ipsun sajnlksanflkasdsadasnf lorem ipnssad  asdaon ;skljkf")
-
-        tempNews.append(post1)
-        tempNews.append(post2)
-
-        return tempNews
-    }
-
 }
 
 extension NewsTableViewViewController: UITableViewDataSource, UITabBarDelegate {
