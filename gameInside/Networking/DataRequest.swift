@@ -25,6 +25,6 @@ func getHTMLFrom(_ thisURL: String) -> String {
         print("Error: \(error)")
 
     }
-    print(HTML)
+//    print(HTML)
     return HTML
 }

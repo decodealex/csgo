@@ -21,8 +21,9 @@ class NewsTableViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         html = getHTMLFrom(baseURLString)
-        parseOneMatchHTML(from: html)
-        parsedData = mainPageParsing(from: parseOneMatchHTML)
+        parseOneMatchDayHTML(from: html)
+//        parseOneMatchHTML(from: html)
+//        parsedData = mainPageParsing(from: parseOneMatchHTML)
         matches = parsedData
         var nib = UINib(nibName: "MatchTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "matchCell")
