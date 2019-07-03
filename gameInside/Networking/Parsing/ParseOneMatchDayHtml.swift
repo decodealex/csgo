@@ -20,13 +20,13 @@ func parseOneMatchDayHTML(from: String) -> [OneMatchDayHTMLModel] {
         var matchDayHTMLs = [OneMatchDayHTMLModel]()
         
         for i in 0...matchDayClass.count - 1 {
-            let matchDayHtmlData = try doc.html()
+            let matchDayHtmlData = try matchDayClass[i].html()
             let matchDayHTMLsData = OneMatchDayHTMLModel(matchesHTML: matchDayHtmlData)
             
             matchDayHTMLs.append(matchDayHTMLsData)
         }
         oneMatchDayHtml = matchDayHTMLs
-//        print("ONEMATCH DAY: \(oneMatchDayHtml)")
+        
     } catch Exception.Error(let type, let message) {
         print(message)
     } catch {
